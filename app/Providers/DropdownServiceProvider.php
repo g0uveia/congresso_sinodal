@@ -3,22 +3,24 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
+use App\Presbiterio;
 
-class AppServiceProvider extends ServiceProvider
+class DropdownServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
+        view()->composer('*', function($view) {
+            $view->with('presbiterios', Presbiterio::all());
+        });
     }
 
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */

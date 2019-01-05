@@ -15,6 +15,7 @@ class CreatePresbiteriosTable extends Migration
     {
         Schema::create('presbiterios', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('sigla');
             $table->timestamps();
         });
     }

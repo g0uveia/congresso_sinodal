@@ -1,0 +1,43 @@
+.cs-navbar {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+
+    a.cs-navbar-title {
+        display: inline-flex;
+        align-items: center;
+        color: darken($grey, 20%);
+
+        &:hover {
+            text-decoration: none;
+        }
+        img {
+            height: 3rem;
+        }
+    }
+
+    ul.cs-navbar-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        margin-left: auto;
+        box-sizing: content-box;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                display: inline-block;
+                padding-bottom: 0.35rem;
+                color: $grey;
+
+                &:hover {
+                    color: darken($grey, 35%);
+                    border-bottom: 2px $primary solid;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

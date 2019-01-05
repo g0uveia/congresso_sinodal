@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::GET('/', 'PageController@index')->name('index');
+
+Route::GET('/inscricao', 'PageController@inscricao')->name('inscricao');
+Route::POST('/inscricao', 'InscritoController@create');
+
+Route::POST('/getIgrejasByPresbiterio', 'GetIgrejasByPresbiterio');
+
+Route::GET('/login', 'PageController@login')->name('login');
+Route::POST('/login', 'InscritoController@login');

@@ -15,6 +15,8 @@ class CreateIgrejasTable extends Migration
     {
         Schema::create('igrejas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome');
+            $table->integer('presbiterio_id');
             $table->timestamps();
         });
     }
