@@ -1,0 +1,25 @@
+
+Front-end:
+    Head:
+        ☐ Adicionar <title>
+
+    Navbar:
+        ☐ Adicionar título na navbar do site
+        ☐ Mostrar link ativo
+        ☐ Tornar responsiva
+
+    Footer:
+        ☐ Adicionar rodapé básico
+
+Back-end:
+    Inscrito:
+        ☐ Substituir CPF por RG
+
+
+
+14/01:
+    ☐ Descobrir como fazer os gráficos da página dashboard
+    ☐ Finalizar o dashboard
+    ☐ Registrar pagamentos
+    ☐ Listar situação de inscritos
+    ☐ Alimentar tabela igrejas

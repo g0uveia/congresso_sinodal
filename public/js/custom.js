@@ -1,5 +1,15 @@
 $(document).ready(function() {
-    $("#cs-inputCPF").mask("999.999.999-99");
+    $('#cs-navbar-toggler').click(function (event) {
+        event.preventDefault();
+
+        $('.cs-navbar').toggle("slow");
+
+        if ($(this).find('i').html() == 'toggle_off') {
+            $(this).find('i').html('toggle_on');
+        } else {
+            $(this).find('i').html('toggle_off');
+        }
+    });
 
     $.ajaxSetup({
         headers: {
@@ -7,7 +17,6 @@ $(document).ready(function() {
         }
     });
 
-    /** AJAX **/
     $('#cs-selectPresbiterio').change(function() {
         $.post('/getIgrejasByPresbiterio', {'presbiterio_id': $('#cs-selectPresbiterio').val()},
             function(data){

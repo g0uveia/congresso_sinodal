@@ -3,10 +3,17 @@
 $body-bg: #ffffff;
 
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
+$font-family-sans-serif: "Roboto", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-// Colors
-$grey: #666;
-$primary: lighten(#005131, 10%);
+
+
+// Pallete
+$background: #3F7457;
+$bg-highlight: #39815A;
+$primary: #3CB674;
+$midtone: #49A774;
+
+$grey-1: #DDD;
+$grey-2: #EEE;

@@ -15,10 +15,10 @@ class CreateInscritosTable extends Migration
     {
         Schema::create('inscritos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('igreja_id');
             $table->string('nome');
-            $table->string('cpf');
             $table->date('nascimento');
-            $table->string('sexo');
+            $table->char('sexo', 1);
             $table->string('email');
             $table->string('inscricao');
             $table->timestamps();

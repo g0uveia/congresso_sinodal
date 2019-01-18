@@ -1,18 +1,86 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
+@import '_modules/chart';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 // Navbar
-@import 'modules/navbar';
+@import '_modules/navbar';
 
+.cs-bg {
+    background: darken($midtone, 5%);
+}
+
+.cs-content {
+    overflow-y: auto;
+
+    a:not(.btn) {
+        color: $midtone;
+        font-weight: 500;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-height: 100vh;
+    }
+}
+
+.cs-panel {
+    @include make-row();
+    justify-content: center;
+    padding: 1.5rem .75rem 1.75rem .75rem;
+}
+
+.cs-container {
+    @include make-row();
+    background: $grey-2;
+    padding-bottom: 30px;
+}
+
+
+.border-primary-darken {
+    border-color: darken($midtone, 10%) !important;
+}
+
+
+/*
 input, select {
     outline: none;
     box-shadow:none !important;
     border:1px solid #ccc !important;
 }
+
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.cs-tcrow {
+    height: 100%;
+
+
+    .card {
+        height: 100%;
+        padding: 1rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: column;
+
+        .col:first-of-type {
+            padding-bottom: 15px;
+        }
+        .col:last-of-type {
+            padding-top: 15px;
+        }
+    }
+}
+*/

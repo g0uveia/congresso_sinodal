@@ -1,0 +1,179 @@
+.cs-navbar-container {
+    padding-bottom: 60px;
+
+    @include media-breakpoint-up(lg) {
+        float: left;
+        padding-bottom: 0;
+    }
+
+    .cs-navbar {
+        display: none;
+        box-shadow: 5px 0px 20px rgba(50,50,50,0.25);
+        position: fixed;
+        z-index: 999;
+        top: 60px;
+        width: 250px;
+        min-height: 100vh;
+        background: $background;
+
+
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            top: 0;
+            display: block;
+        }
+
+        a {
+            color: $grey-1;
+
+            &:hover {
+                color: $grey-2;
+                text-decoration: none;
+            }
+        }
+
+        .cs-navbar-brand {
+            display: inline-block;
+            width: 100%;
+            padding: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            border-bottom: 1px darken($background, 5%) solid;
+
+            .cs-navbar-brand-logo {
+                max-width: 60px;
+                margin-bottom: .5rem;
+            }
+
+            .cs-navbar-brand-title {
+                font-size: 1.2rem;
+                margin-bottom: .25rem;
+            }
+
+            .cs-navbar-brand-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        .cs-navbar-nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .cs-navbar-link {
+                display: inline-flex;
+                    align-items: center;
+                height: 60px;
+                width: 100%;
+                padding: 0 2rem 0 2.5rem;
+                font-size: 1rem;
+                font-weight: 500;
+
+                &.active {
+                    background: $bg-highlight;
+                    border-left: 5px $white solid;
+                    color: $white;
+                }
+
+                i {
+                    padding-right: .5rem;
+                }
+           }
+        }
+    }
+
+    .cs-navbar-hr {
+        display: flex;
+            justify-content: space-between;
+        height: 60px;
+        width: 100%;
+        padding: 0 2rem;
+        background: $background;
+        position: fixed;
+        box-shadow: 0px 5px 20px rgba(50,50,50,0.25);
+        z-index: 999;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        .cs-navbar-brand {
+            display: inline-flex;
+                align-items: center;
+            height: 100%;
+            .cs-navbar-brand-logo {
+                max-height: 40px;
+            }
+        }
+
+        #cs-navbar-toggler {
+            display: inline-flex;
+                align-items: center;
+            height: 100%;
+            color: $grey-2;
+            text-decoration: none;
+
+            i {
+                font-size: 40px;
+            }
+        }
+    }
+
+
+}
+
+
+
+/*** OLD
+
+.cs-navbar {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+
+    a.cs-navbar-title {
+        display: inline-flex;
+        align-items: center;
+        color: darken($grey, 20%);
+
+        &:hover {
+            text-decoration: none;
+        }
+        img {
+            height: 3rem;
+        }
+    }
+
+    ul.cs-navbar-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        margin-left: auto;
+        box-sizing: content-box;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                display: inline-block;
+                padding-bottom: 0.35rem;
+                color: $grey;
+
+            }
+
+            &.active {
+                color: darken($grey, 40%);
+                border-bottom: 3px $primary solid;
+            }
+            &:hover:not(.active) {
+                border-bottom: 2px $primary solid;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+***/
