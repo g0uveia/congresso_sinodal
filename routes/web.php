@@ -13,13 +13,18 @@
 
 # GUEST ROUTES
 Route::GET('/', 'InscritoController@create')->name('home');
+Route::GET('/mail', function () {
+    $user = App\Inscrito::first();
+    return (new App\Mail\InformacoesPagamento($user));
+});
 Route::POST('/inscricao', 'InscritoController@store');
 Route::POST('/getIgrejasByPresbiterio', 'GetIgrejasByPresbiterio');
 
+Route::GET('/admin', 'PageController@admin')->name('login');
+Route::POST('/admin', 'AdminController@login');
 
 # AUTH ROUTES
-Route::prefix('admin')->group(function () {
-    // middleware('auth')
+Route::middleware('auth')->prefix('admin')->group(function () {
     # ADMIN ROUTES
     Route::name('admin.')->group(function () {
         Route::GET('/dashboard', 'AdminController@dashboard')->name('dashboard');
@@ -43,20 +48,3 @@ Route::prefix('admin')->group(function () {
     });
 
 });
-
-
-
-/***
-Route::GET('/inscricao', 'PageController@inscricao')->name('inscricao');
-
-***/
-
-/*** ADMIN
-Route::GET('/admin', 'PageController@admin')->name('login');
-Route::POST('/admin', 'AdminController@login');
-
-Route::GET('/inscritos', 'InscritoController@index')->name('inscritos.index')->middleware('auth');
-->middleware('auth');
-
-
-***/

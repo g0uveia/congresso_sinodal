@@ -11157,7 +11157,7 @@ a.text-dark:focus {
 
 .cs-navbar-container .cs-navbar {
   display: none;
-  box-shadow: 5px 0px 20px rgba(50, 50, 50, 0.25);
+  box-shadow: 5px 0px 25px rgba(25, 25, 25, 0.5);
   position: fixed;
   z-index: 999;
   top: 60px;
@@ -11326,12 +11326,176 @@ a.text-dark:focus {
 
 ***/
 
+.cs-guest {
+  background: #3F7457;
+}
+
+.cs-box {
+  box-shadow: 5px 5px 25px rgba(35, 35, 35, 0.25);
+}
+
+.cs-green-card {
+  padding: 2.25rem;
+  background: #49A774;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.cs-green-card h3 {
+  font-weight: bold;
+}
+
+.cs-green-card img {
+  max-height: 125px;
+}
+
+label {
+  margin: 0;
+}
+
+.cs-login-logo {
+  max-width: 75px;
+  margin-bottom: 1rem;
+}
+
+.cs-footer {
+  color: #d0d0d0;
+}
+
+.cs-footer a {
+  font-weight: 500;
+}
+
+.col-lg-7 .cs-white-card {
+  min-height: 550px;
+}
+
+.cs-white-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cs-white-card .cs-steps {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.cs-white-card .cs-steps span {
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #DDD;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.cs-white-card .cs-steps span:last-of-type {
+  margin-right: 0;
+}
+
+.cs-white-card .cs-steps span.active {
+  border: 3px #DDD solid;
+  background-color: #3CB674;
+}
+
+.cs-white-card .form-group {
+  position: relative;
+}
+
+.cs-white-card .form-group input,
+.cs-white-card .form-group select {
+  padding-top: 0.5rem;
+}
+
+.cs-white-card .form-group input,
+.cs-white-card .form-group select,
+.cs-white-card .form-group .btn {
+  height: 3rem;
+  border-radius: 0;
+}
+
+.cs-white-card .form-group input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.cs-white-card .form-group input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.cs-white-card .form-group input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.cs-white-card .form-group input::placeholder {
+  opacity: 0;
+}
+
+.cs-white-card .form-group input:focus + .cs-label,
+.cs-white-card .form-group select:focus + .cs-label {
+  color: #3CB674;
+}
+
+.cs-white-card .form-group input:focus + .cs-label,
+.cs-white-card .form-group input[type=date] + .cs-label,
+.cs-white-card .form-group select + .cs-label,
+.cs-white-card .form-group .cs-label.up,
+.cs-white-card .form-group input:not([value=""]) + label {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  top: -0.25rem;
+  padding: 0 0.25rem;
+  background-color: white;
+  transition: font-size 0.35s, top 0.35s, line-height 0.35s, background-color 0.4s;
+}
+
+.cs-white-card .form-group input:focus::-webkit-input-placeholder {
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.cs-white-card .form-group input:focus:-ms-input-placeholder {
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.cs-white-card .form-group input:focus::-ms-input-placeholder {
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.cs-white-card .form-group input:focus::placeholder {
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.cs-white-card .form-group .cs-label {
+  transition: font-size 0.35s, top 0.35s, line-height 0.35s, opacity 0.4s;
+  display: inline-block;
+  color: #AAA;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0.75rem;
+  line-height: 3rem;
+  margin: 0;
+}
+
 .cs-bg {
   background: #419568;
 }
 
 .cs-content {
   overflow-y: auto;
+  background: #EEE;
+  min-height: 100vh;
 }
 
 .cs-content a:not(.btn) {
@@ -11352,6 +11516,7 @@ a.text-dark:focus {
   margin-left: -15px;
   justify-content: center;
   padding: 1.5rem 0.75rem 1.75rem 0.75rem;
+  background: white;
 }
 
 .cs-container {
@@ -11359,20 +11524,21 @@ a.text-dark:focus {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  background: #EEE;
-  padding-bottom: 30px;
+  padding: 0 1rem 30px 1rem;
 }
 
 .border-primary-darken {
   border-color: #39845b !important;
 }
 
-/*
-input, select {
-    outline: none;
-    box-shadow:none !important;
-    border:1px solid #ccc !important;
+input,
+select {
+  outline: none;
+  box-shadow: none !important;
+  border: 1px solid #AAA;
 }
+
+/*
 
 
 

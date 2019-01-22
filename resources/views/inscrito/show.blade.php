@@ -1,7 +1,8 @@
 @extends('_layouts.admin')
 
 @section('content')
-    <div class="px-4">
+    <div class="container p-5">
+
         @include('_includes.back.inscritos')
 
         <div class="row">

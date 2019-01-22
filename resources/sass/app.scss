@@ -11,12 +11,16 @@
 // Navbar
 @import '_modules/navbar';
 
+@import 'guest';
+
 .cs-bg {
     background: darken($midtone, 5%);
 }
 
 .cs-content {
     overflow-y: auto;
+    background: $grey-2;
+    min-height: 100vh;
 
     a:not(.btn) {
         color: $midtone;
@@ -32,12 +36,12 @@
     @include make-row();
     justify-content: center;
     padding: 1.5rem .75rem 1.75rem .75rem;
+    background: white
 }
 
 .cs-container {
     @include make-row();
-    background: $grey-2;
-    padding-bottom: 30px;
+    padding: 0 1rem 30px 1rem;
 }
 
 
@@ -45,13 +49,13 @@
     border-color: darken($midtone, 10%) !important;
 }
 
-
-/*
 input, select {
     outline: none;
     box-shadow:none !important;
-    border:1px solid #ccc !important;
+    border:1px solid #AAA;
 }
+
+/*
 
 
 

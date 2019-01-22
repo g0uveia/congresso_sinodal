@@ -1,0 +1,131 @@
+.cs-guest {
+    background: $background;
+}
+
+.cs-box {
+    box-shadow: 5px 5px 25px rgba(35,35,35,0.25);
+}
+
+.cs-green-card {
+    padding: 2.25rem;
+    background: $midtone;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: $white;
+    text-align: center;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    img {
+        max-height: 125px;
+    }
+}
+
+label {
+    margin: 0;
+}
+
+.cs-login-logo {
+    max-width: 75px;
+    margin-bottom: 1rem;
+}
+
+.cs-footer {
+    color: darken($grey-1, 5%);
+    a {
+        font-weight: 500;
+    }
+}
+
+.col-lg-7 .cs-white-card {
+    min-height: 550px;
+}
+
+.cs-white-card {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+
+    .cs-steps {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+
+        span {
+            display: block;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background: $grey-1;
+            margin-right: 15px;
+            cursor: pointer;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &.active {
+                border: 3px $grey-1 solid;
+                background-color: $primary;
+            }
+        }
+    }
+
+
+    .form-group {
+        position: relative;
+
+        input, select {
+            padding-top: .5rem;
+        }
+
+        input, select, .btn {
+            height: 3rem;
+            border-radius: 0;
+        }
+
+        input::placeholder {
+            opacity: 0;
+        }
+
+        input:focus + .cs-label, select:focus + .cs-label {
+            color: $primary;
+        }
+
+        input:focus + .cs-label, input[type=date] + .cs-label, select + .cs-label, .cs-label.up, input:not([value=""]) + label
+        {
+            font-size: .7rem;
+            line-height: .7rem;
+            top: -.25rem;
+            padding: 0 .25rem;
+            background-color: white;
+            transition: font-size .35s, top .35s, line-height .35s, background-color .4s;
+
+
+        }
+
+        input:focus::placeholder {
+            transition: opacity .4s;
+            opacity: 0.5;
+        }
+
+        .cs-label {
+            transition: font-size .35s, top .35s, line-height .35s, opacity 0.4s;
+            display: inline-block;
+            color: #AAA;
+            z-index: 999;
+            position: absolute;
+            top: 0;
+            left: .75rem;
+            line-height: 3rem;
+            margin: 0;
+        }
+    }
+
+}

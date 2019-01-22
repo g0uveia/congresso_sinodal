@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 use App\Inscrito;
+use App\Presbiterio;
 use App\TipoPagamento;
+use App\Mail\InformacoesPagamento;
 
 class InscritoController extends Controller
 {
@@ -27,7 +30,10 @@ class InscritoController extends Controller
     }
 
     public function create() {
-        return view('inscrito.create');
+        return view('inscrito.create')->with([
+            'presbiterios' => Presbiterio::All(),
+            'igrejas' => Presbiterio::first() ? Presbiterio::first()->igrejas : []
+        ]);
     }
 
     public function store (Request $request) {
@@ -47,8 +53,9 @@ class InscritoController extends Controller
             $inscrito->igreja_id = $request->igreja;
 
             $inscrito->save();
-        }
 
+            Mail::to($inscrito)->send(new InformacoesPagamento($inscrito));
+        }
 
 
         return redirect()->back()->with(['success' => true]);
@@ -66,7 +73,9 @@ class InscritoController extends Controller
 
     public function search (Request $request) {
         if ($request->ajax()) {
-            $inscritos = Inscrito::where('nome', 'like', '%'.$request->get('query').'%')->orWhere('nome', 'like', '%'.$request->get('query').'%')->paginate(10);
+            $inscritos = Inscrito::where('nome', 'like', '%'.$request->get('query').'%')
+                ->orWhere('nome', 'like', '%'.$request->get('query').'%')
+                    ->paginate(10);
 
             $response = [
                 'table_tbody' => '',

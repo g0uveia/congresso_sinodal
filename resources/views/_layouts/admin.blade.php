@@ -18,9 +18,7 @@
             @include('_includes.navbar')
 
             <div class="cs-content">
-                <div class="container-fluid">
-                    @yield('content')
-                </div>
+                @yield('content')
             </div>
         </div>
     </body>

@@ -6,8 +6,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Inscrito;
 
-class InfoPagamento extends Mailable
+class InformacoesPagamento extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,7 +19,7 @@ class InfoPagamento extends Mailable
      *
      * @return void
      */
-    public function __construct($inscrito)
+    public function __construct(Inscrito $inscrito)
     {
         $this->inscrito = $inscrito;
     }
@@ -30,6 +31,6 @@ class InfoPagamento extends Mailable
      */
     public function build()
     {
-        return $this->markdown('inscrito.email');
+        return $this->view('mail.info');
     }
 }

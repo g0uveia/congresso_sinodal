@@ -11,5 +11,5 @@
         </table>
     </div>
 @else
-    @include('_includes.inscritos.notfound')
+    @include('_includes.inscrito.notfound')
 @endif

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<h2 class="pb-2">Inscrição</h2>
+<h2 class="pb-4 text-center">Inscrição</h2>
 
 <form method="post">
     @csrf
@@ -11,7 +11,7 @@
         <div class="col-md-6">
             <!-- Nome -->
             <div class="form-group">
-                <label for="cs-inputNome">Nome Completo:</label>
+                <label for="cs-inputNome" class="position-absolute">Nome Completo:</label>
                 <input class="form-control" placeholder="ex: Maria das Graças Anunciação Silva" autofocus required type="text" id="cs-inputNome" name="nome" value="{{ old('nome') }}">
             </div>
 

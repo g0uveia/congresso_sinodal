@@ -1,6 +1,6 @@
-<div class="card p-md-3 p-2">
-    <div class="card-body">
-        <h4 class="pb-3">Inscrições por Presbitério</h4>
+<div class="card p-md-3 p-2  h-100">
+    <div class="card-body d-flex flex-column justify-content-around">
+        <h4 class="pb-3 text-center">Inscrições por Presbitério</h4>
 
         <canvas id="cs-porpresb-chart"></canvas>
 
@@ -30,7 +30,8 @@
                 responsive: true,
                 legend: {
                     position: 'bottom'
-                }
+                },
+                aspectRatio: 1
             }
 
             var porPresbChart = new Chart(ctx, {

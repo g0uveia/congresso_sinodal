@@ -28,7 +28,8 @@
             options = {
                 legend: {
                     position: 'bottom'
-                }
+                },
+                aspectRatio: 2
             }
 
             var porPresbChart = new Chart(ctx, {

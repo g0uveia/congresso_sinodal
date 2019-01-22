@@ -113,7 +113,7 @@ return [
     */
 
     'markdown' => [
-        'theme' => 'congresso',
+        'theme' => 'default',
 
         'paths' => [
             resource_path('views/vendor/mail'),
